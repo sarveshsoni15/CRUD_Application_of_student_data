@@ -335,6 +335,7 @@ if(f==NULL)
 printf("Invalid roll number\n");
 return;
 }
+  
 found=0;
 while(1)
 {
