@@ -237,7 +237,12 @@ printf("Student (Delete Module)\n");
 printf("Enter roll number of the student to delete : ");
 scanf("%d",&rollNumber);
 fflush(stdin);
-
+if(rollNumber<=0)
+{
+printf("Invalid roll number\n");
+return;
+}
+  
 f1=fopen("student.dat","rb");
 if(f1==NULL)
 {
