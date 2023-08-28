@@ -49,7 +49,7 @@ void addStudent()
 FILE *f;
 struct Student t,g;
 int rollNumber;
-char name[37];    // name size 35 and 1 for '\n' ,  1 for '\0'
+char name[37];   
 char gender;
 char m;
 printf("Student (Add Module)\n");
@@ -61,7 +61,7 @@ if(rollNumber<=0)
 printf("Invalid roll number\n");
 return;
 }
-f=fopen("student.dat","rb");  // searching ka logic
+f=fopen("student.dat","rb");  
 if(f!=NULL)
 {
 while(1)
@@ -79,8 +79,7 @@ return;
 fclose(f);
 }
 printf("Enter name : ");
-fgets(name,37,stdin);    // scanf("%d[^\n]",name); safety nahi h kyuki user 37 se jyada bhi de skta hai isliye fg
-fflush(stdin);
+fgets(name,37,stdin);    
 name[strlen(name)-1]='\0';
 
 printf("Enter gender (M/F) : ");
